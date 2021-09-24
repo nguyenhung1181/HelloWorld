@@ -27,24 +27,28 @@ namespace Task2
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ClickMeButton_Click(object sender, RoutedEventArgs e)
         {
-            ResultTextBlock.Text = "HelloWorld";
+            ResultTextBlock.Text = "What is XAML?";
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e) {
-            Button mybutton = new Button();
-            mybutton.Name = "ClickMeButton";
-            mybutton.Content = "Click Me";
-            mybutton.Width = 200;
-            mybutton.Height = 100;
-            mybutton.Margin = new Thickness(20, 20, 0, 0);
-            mybutton.HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
-            mybutton.VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
-            mybutton.Background = new SolidColorBrush(Windows.UI.Colors.Red);
-            mybutton.Click += Button_Click;
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
 
-            LayoutGrid.Children.Add(mybutton);
+            Button myButton = new Button();
+            myButton.Name = "ClickMeButton";
+            myButton.Content = "Click Me";
+            myButton.Width = 200;
+            myButton.Height = 100;
+            myButton.Margin = new Thickness(20, 20, 0, 0);
+            myButton.HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Left;
+            myButton.VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Top;
+
+            myButton.Background = new SolidColorBrush(Windows.UI.Colors.Red);
+            myButton.Click += ClickMeButton_Click;
+
+            LayoutGrid.Children.Add(myButton);
+
         }
     }
 }

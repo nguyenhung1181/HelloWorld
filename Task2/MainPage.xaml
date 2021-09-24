@@ -5,12 +5,31 @@
     xmlns:local="using:Task2"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Loaded="Page_Loaded"
+    mc:Ignorable="d" 
+    Loaded="Page_Loaded"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Name="LayoutGrid">
-        <!--<Button x:Name="ClickMeButton" Content=" Click This" HorizontalAlignment="Center" Margin="0,500,0,0" VerticalAlignment="Top" Height="64" Width="144" Click="Button_Click" FontSize="24"/>-->
-        <TextBlock x:Name="ResultTextBlock" Text="TextBlock" TextWrapping="Wrap" Margin="910,621,264,274" FontSize="64"/>
+        <Button x:Name="ClickMeButton" 
+                Content=" Click This" 
+                HorizontalAlignment="Left" 
+                Margin="20,20,0,0" 
+                VerticalAlignment="Top" 
+                Height="100" Width="200" 
+                Click="ClickMeButton_Click"
+                FontSize="24">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Red" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="ResultTextBlock" 
+                   Text="TextBlock" 
+                   TextWrapping="Wrap" 
+                   Margin="910,621,264,274" 
+                   FontSize="64"/>
 
     </Grid>
 </Page>
